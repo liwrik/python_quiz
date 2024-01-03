@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="">
+    <title>Викторина</title>
+</head>
+<body>
+    <h1>Викторины для самых умных.</h1>
+    <h2>Добро пожаловать! Выберите викторину: </h2>
+        <form method="post" action="/index">
+            <select name = "quiz">
+                {% for id, name in q_list %}
+                    <option value = "{{id}}">{{name}} </option>
+                {% endfor %}
+            </select>
+            <p><input type="submit" value="Выбрать"></p>
+        </form>
+</body>
+<footer>
+    <p>Поддержать автора</p><a href="">тык</a>
+</footer>
+</html>
